@@ -1,0 +1,11 @@
+{
+  "name": "my-project-name",
+  "version": "0.1.1",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-csslint": "~0.2.0",
+    "jshint-stylish":"~0.1.5",
+    "grunt-php-cs-fixer":"~0.0.4"
+  }
+}
