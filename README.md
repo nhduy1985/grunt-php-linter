@@ -14,6 +14,7 @@ Installation
 ----------------
 
 Clone project at 
+
 ```
 git@lab.likipe.se:vida-team/grunt-linter.git
 ``` 
@@ -22,6 +23,7 @@ git@lab.likipe.se:vida-team/grunt-linter.git
 -------------------
 
 Run command on the folder that you have just download
+
 ``` bash
 npm install
 ``` 
@@ -33,6 +35,7 @@ npm install
 ------------------------
 
 Run command and check the version
+
 ``` bash
 grunt --version
 ```
@@ -45,12 +48,14 @@ How to run
 ----------------------------
 
 - Create file on ``projects/config.<project-name>.json`` based on config templates for each frameworks
+
 ```
 config.magento.json //for Magento project
 config.wordpress.json  //for Wordpress project
 ...
 config.default.json //for default project
 ```
+
 - Edit config base on project
 - Notes:
     - Use ``!`` for exclude files
@@ -61,6 +66,7 @@ config.default.json //for default project
 ------------------
 
 by running the command
+
 ``` 
 grunt linter 
 ```
