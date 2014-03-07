@@ -8,19 +8,23 @@ module.exports = function(grunt) {
       options: {
         reporter: require('jshint-stylish'),
         reporterOutput: 'reports/jshint.report'
-      },      
+      },
       all: '<%= settings.paths.js %>',
     },
-    csslint: {      
+    csslint: {
       strict: {
-        options: {          
+        options: {
           import: 2,
           absoluteFilePathsForFormatters: true,
           formatters: [{
             id: 'text',
             dest: 'reports/csslint.report'
           }],
-          quiet: true
+          quiet: true,
+          'adjoining-classes': false,
+          'ids': false,
+          'fallback-color': false,
+          'universal-selector': false
         },
         src: '<%= settings.paths.css %>'
       }
@@ -33,7 +37,8 @@ module.exports = function(grunt) {
         bin: 'php tools/php-cs-fixer.phar',
         ignoreExitCode: true,
         level: 'all',
-        quiet: false
+        quiet: false,
+        fixers: '-braces'
       }
     },
     phpcpd: {
@@ -54,7 +59,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-php-cs-fixer');
   grunt.loadNpmTasks('grunt-phpcpd');
   // Default task(s).
-  grunt.registerTask('linter','Linter Task', function() {grunt.option('force', true);grunt.task.run( ['jshint','csslint','phpcpd','phpcsfixer'])});
-  grunt.registerTask('test',['jshint']);
-  
+  grunt.registerTask('linter', 'Linter Task', function() {
+    grunt.option('force', true);
+    grunt.task.run(['jshint', 'csslint', 'phpcpd', 'phpcsfixer'])
+  });
+  grunt.registerTask('test', ['phpcsfixer']);
 };
