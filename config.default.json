@@ -1,0 +1,14 @@
+{
+	"description": "The configuration linter for project XXX",
+	"paths": {
+		"css": [
+			"css/**/*.css"
+		],
+		"js": [
+			"js/*.js", 
+			"!js/bootstrap.js", 
+			"!js/bootstrap.min.js"
+		],
+		"php_dir": "app/"	
+	}
+}

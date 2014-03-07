@@ -1,44 +1,60 @@
 module.exports = function(grunt) {
-
   // Project configuration.
   grunt.initConfig({
+    settings: grunt.file.readJSON('projects/config.vestito.json'),
+    verbose: true,
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
       options: {
-            reporter: require('jshint-stylish')
-      },
-      //JS files need to be validate
-      all: [
-        'Gruntfile.js', 
-        'src/**/*.js'
-      ],
+        reporter: require('jshint-stylish'),
+        reporterOutput: 'reports/jshint.report'
+      },      
+      all: '<%= settings.paths.js %>',
     },
-    csslint: {
+    csslint: {      
       strict: {
-        options: {
-          import: 2
+        options: {          
+          import: 2,
+          absoluteFilePathsForFormatters: true,
+          formatters: [{
+            id: 'text',
+            dest: 'reports/csslint.report'
+          }],
+          quiet: true
         },
-        src: ['src/**/*.css']
+        src: '<%= settings.paths.css %>'
       }
     },
     phpcsfixer: {
       app: {
-          dir: 'src/app'
+        dir: '<%= settings.paths.php_dir %>'
       },
       options: {
-          bin: 'php php-cs-fixer.phar',
-          ignoreExitCode: true,          
-          level: 'all',
-          quiet: false
+        bin: 'php tools/php-cs-fixer.phar',
+        ignoreExitCode: true,
+        level: 'all',
+        quiet: false
       }
-  }
+    },
+    phpcpd: {
+      application: {
+        dir: '<%= settings.paths.php_dir %>'
+      },
+      options: {
+        bin: 'php tools/phpcpd.phar',
+        quiet: false,
+        reportFormat: 'txt',
+        reportFile: 'reports/phpcpd.report',
+        ignoreExitCode: true
+      }
+    }
   });
-
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-php-cs-fixer');
-
+  grunt.loadNpmTasks('grunt-phpcpd');
   // Default task(s).
-  grunt.registerTask('linter', ['phpcsfixer']);
-
+  grunt.registerTask('linter','Linter Task', function() {grunt.option('force', true);grunt.task.run( ['jshint','csslint','phpcpd','phpcsfixer'])});
+  grunt.registerTask('test',['jshint']);
+  
 };

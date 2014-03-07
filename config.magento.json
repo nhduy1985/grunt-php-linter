@@ -1,0 +1,14 @@
+{
+	"description": "The configuration linter for project XXX - Magento template",
+	"paths": {
+		"css": [
+			"<root-path>/skin/frontend/default/<template-name>/css/**/*.css"
+		],
+		"js": [
+			"<root-path>/skin/frontend/default/<template-name>/js/*.js", 
+			"!<root-path>/skin/frontend/default/<template-name>/js/bootstrap.js", 
+			"!<root-path>/skin/frontend/default/<template-name>/js/bootstrap.min.js"
+		],
+		"php_dir": "<root-path>/app/"	
+	}
+}

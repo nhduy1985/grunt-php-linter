@@ -1,0 +1,14 @@
+{
+	"description": "The configuration linter for project XXX - WP template",
+	"paths": {
+		"css": [
+			"<root-path>/wp-content/themes/<template-name>/style.css"
+		],
+		"js": [
+			"<root-path>/wp-content/themes/<template-name>/js/*.js", 
+			"!<root-path>/wp-content/themes/<template-name>/js/bootstrap.js", 
+			"!<root-path>/wp-content/themes/<template-name>/js/bootstrap.min.js"
+		],
+		"php_dir": "<root-path>/wp-content/"	
+	}
+}
