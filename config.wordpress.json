@@ -1,5 +1,7 @@
 {
+	"name": "Wordpress Project",
 	"description": "The configuration linter for project XXX - WP template",
+	"type": "wordpress",
 	"paths": {
 		"css": [
 			"<root-path>/wp-content/themes/<template-name>/style.css"
