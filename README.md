@@ -50,10 +50,10 @@ How to run
 - Create file on ``projects/config.<project-name>.json`` based on config templates for each frameworks
 
 ```
-config.magento.json //for Magento project
-config.wordpress.json  //for Wordpress project
-...
-config.default.json //for default project
+projects/config.magento.json //for Magento project
+projects/config.wordpress.json  //for Wordpress project
+projects/config.symfony.json  //for Symfony project
+projects/config.default.json //for default project
 ```
 
 - Edit config base on project
