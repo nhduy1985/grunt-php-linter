@@ -34,11 +34,12 @@ module.exports = function(grunt) {
         dir: '<%= settings.paths.php_dir %>'
       },
       options: {
-        bin: 'php tools/php-cs-fixer.phar',
+        configuration: '<%= settings.type %>',
+        bin: 'vendor/bin/php-cs-fixer',
         ignoreExitCode: true,
         level: 'all',
         quiet: false,
-        fixers: '-braces'
+        fixers: '-braces,-indentation'
       }
     },
     phpcpd: {
@@ -46,7 +47,7 @@ module.exports = function(grunt) {
         dir: '<%= settings.paths.php_dir %>'
       },
       options: {
-        bin: 'php tools/phpcpd.phar',
+        bin: 'vendor/bin/phpcpd',
         quiet: false,
         reportFormat: 'txt',
         reportFile: 'reports/phpcpd.report',

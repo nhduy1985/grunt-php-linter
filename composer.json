@@ -1,0 +1,6 @@
+{
+    "require": {
+    	"fabpot/php-cs-fixer": "0.4.*@dev",
+        "sebastian/phpcpd": "2.0.*@dev"
+    }
+}
