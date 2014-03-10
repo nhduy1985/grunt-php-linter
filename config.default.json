@@ -1,5 +1,7 @@
 {
+	"name": "Default Project",
 	"description": "The configuration linter for project XXX",
+	"type": "default",
 	"paths": {
 		"css": [
 			"css/**/*.css"

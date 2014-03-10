@@ -1,5 +1,7 @@
 {
+	"name": "Magento Project",
 	"description": "The configuration linter for project XXX - Magento template",
+	"type": "magento",
 	"paths": {
 		"css": [
 			"<root-path>/skin/frontend/default/<template-name>/css/**/*.css"

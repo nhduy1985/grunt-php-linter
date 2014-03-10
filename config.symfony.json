@@ -1,0 +1,16 @@
+{
+	"name": "Symfony Project",
+	"description": "The configuration linter for project XXX",
+	"type": "sf23",
+	"paths": {
+		"css": [
+			"<root-path>/web/<template-name>/css/*.css"
+		],
+		"js": [
+			"<root-path>/web/<template-name>/js/*.js",
+			"!<root-path>/web/<template-name>/js/bootstrap.js",
+			"!<root-path>/web/<template-name>/js/bootstrap.min.js"
+		],
+		"php_dir": "<root-path>/src/"
+	}
+}

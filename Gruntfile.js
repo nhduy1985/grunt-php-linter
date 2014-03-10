@@ -34,6 +34,7 @@ module.exports = function(grunt) {
         dir: '<%= settings.paths.php_dir %>'
       },
       options: {
+        configuration: '<%= settings.type %>',
         bin: 'php tools/php-cs-fixer.phar',
         ignoreExitCode: true,
         level: 'all',

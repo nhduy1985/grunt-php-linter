@@ -6,7 +6,7 @@
     "grunt-contrib-jshint": "~0.6.3",
     "grunt-contrib-csslint": "~0.2.0",
     "jshint-stylish": "~0.1.5",
-    "grunt-php-cs-fixer": "~0.0.4",
+    "grunt-php-cs-fixer": "nhduy1985/grunt-php-cs-fixer",
     "grunt-phpcpd":"~0.1.1"
   }
 }
