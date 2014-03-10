@@ -25,8 +25,6 @@ git@lab.likipe.se:vida-team/grunt-linter.git
 Run command on the folder that you have just download
 
 ``` bash
-npm install -g grunt-cli
-
 npm install
 ``` 
 
@@ -93,7 +91,7 @@ Workflow
 
 
 Reference
-==========
+=========
 
 - CSSLint rules [https://github.com/stubbornella/csslint/wiki/Rules](https://github.com/stubbornella/csslint/wiki/Rules)
 - JSLint options [http://jshint.com/docs/options/](http://jshint.com/docs/options/)
