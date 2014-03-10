@@ -82,6 +82,7 @@ grunt linter
 
 Workflow
 ========
+
 - `Step 1`: (Developer) Coding
 - `Step 2`: (Developer) Before commit code to git, run the linter to check your files => fix errors
 - `Step 3`: (Developer) Commit => push => create Merge Request
@@ -90,7 +91,9 @@ Workflow
     - If there are errors in linter => ask developer for fixing
     - If not => accept MR
 
+
 References
 ==========
+
 - CSSLint rules [https://github.com/stubbornella/csslint/wiki/Rules](https://github.com/stubbornella/csslint/wiki/Rules)
 - JSLint options [http://jshint.com/docs/options/](http://jshint.com/docs/options/)
