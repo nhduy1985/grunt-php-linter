@@ -1,5 +1,5 @@
 {
-  "name": "my-project-name",
+  "name": "likipe-tool",
   "version": "0.1.1",
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -8,5 +8,10 @@
     "jshint-stylish": "~0.1.5",
     "grunt-php-cs-fixer": "nhduy1985/grunt-php-cs-fixer",
     "grunt-phpcpd":"~0.1.1"
+  },
+  "scripts": {
+    "preinstall": "npm install -g grunt-cli",
+    "postinstall": "node tools/install.js",
+    "update": "node tools/update.js"
   }
 }
