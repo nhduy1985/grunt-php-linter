@@ -14,3 +14,5 @@ node_modules
 
 reports/
 projects/*
+tools/php-cs-fixer.phar
+tools/phpcpd.phar
