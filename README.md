@@ -92,7 +92,7 @@ Workflow
     - If not => accept MR
 
 
-References
+Reference
 ==========
 
 - CSSLint rules [https://github.com/stubbornella/csslint/wiki/Rules](https://github.com/stubbornella/csslint/wiki/Rules)
