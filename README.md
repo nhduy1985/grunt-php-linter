@@ -25,6 +25,8 @@ git@lab.likipe.se:vida-team/grunt-linter.git
 Run command on the folder that you have just download
 
 ``` bash
+npm install -g grunt-cli
+
 npm install
 ``` 
 
@@ -78,7 +80,6 @@ grunt linter
 - ``reports/jslint.report``: report summary for jslint
 - ``reports/phpcpd.report``: report summary for php duplicate 
 
-
 Workflow
 ========
 - `Step 1`: (Developer) Coding
@@ -88,3 +89,8 @@ Workflow
 - `Step 5`:
     - If there are errors in linter => ask developer for fixing
     - If not => accept MR
+
+References
+==========
+- CSSLint rules [https://github.com/stubbornella/csslint/wiki/Rules](https://github.com/stubbornella/csslint/wiki/Rules)
+- JSLint options [http://jshint.com/docs/options/](http://jshint.com/docs/options/)
